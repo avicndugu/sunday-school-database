@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Picture learner</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sunday School Database">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container"> 
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                  <h1 id="logo" class="title">Sunday School Database</h1>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container" id="app-container">
+            <div id="page-header">
+                <h1 id="page-title">New Student</h1>
+            </div>
+            <form>
+                <label>Student Name:</label><br>
+                <input type="text" name="name"><br>
+                <label>Phone Number:</label><br>
+                <input type="text" name="phone"><br>
+                <label>Additional Phone Number:</label><br>
+                <input type="text" name="phone-two"><br>
+                <label>Add a profile picture:</label><br>
+                <input type="file" name="profile-picture"><br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
