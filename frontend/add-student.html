@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bulma.min.css">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+        #page-header{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -26,18 +31,56 @@
     <section class="section">
         <div class="container" id="app-container">
             <div id="page-header">
-                <h1 id="page-title">New Student</h1>
+                <h1 class="title">New Student</h1>
             </div>
             <form>
-                <label>Student Name:</label><br>
-                <input type="text" name="name"><br>
-                <label>Phone Number:</label><br>
-                <input type="text" name="phone"><br>
-                <label>Additional Phone Number:</label><br>
-                <input type="text" name="phone-two"><br>
-                <label>Add a profile picture:</label><br>
-                <input type="file" name="profile-picture"><br>
-                <button>Submit</button>
+                <div class="field">
+                    <label class="label">Student Name</label>
+                    <div class="control">
+                        <input class="input" type="text" name="name" placeholder="Text input" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Phone Number</label>
+                    <div class="control">
+                        <input class="input" type="tel" name="phone" placeholder="Your phone number" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Additional Phone Number</label>
+                    <div class="control">
+                        <input class="input" type="tel" name="phone2" placeholder="Your phone number">
+                    </div>
+                </div>
+                <!-- <div class="file has-name is-boxed">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="profile-picture">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Add a profile picture
+                            </span>
+                        </span>
+                        <span class="file-name">
+                            Screen Shot 2017-07-29 at 15.54.25.png
+                        </span>
+                    </label>
+                </div> -->
+                <div class="field">
+                    <p class="control">
+                        <label>Add a profile picture:</label><br>
+                        <input type="file" name="profile-picture"><br>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-success is-fullwidth">
+                            Submit
+                        </button>
+                    </p>
+                </div>
             </form>
         </div>
     </section>
