@@ -35,7 +35,7 @@ app.get('/', function (req, res) {
 // })
 
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NEW CODE THAT IS WORKING WELL
 
 // // Get the results of the whole class table as a json object\
@@ -43,7 +43,7 @@ app.get('/viewClass', function (req, res) {
    // console.log(req.body);
    connection.query('select * from class1', function (error, results, fields) {
       if (error) throw error;
-      res.end(JSON.stringify(results[1]));
+      res.end(JSON.stringify(results));
     });
 });
 // // End of Get the results of the whole class table as a json object\
@@ -73,7 +73,7 @@ app.post('/submit', function (req, res) {
 // end of INSERT data of one student into mysql
 
 // END OF NEW CODE THAT IS WORKING WELL
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 // Start of test route
