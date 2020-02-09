@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  nav.navbar(role='navigation' aria-label='main navigation')
+    .container
+      .navbar-brand
+        a.navbar-item(href='#')
+          h1#logo.title Sunday School Database
+        a.navbar-burger(role='button' aria-label='menu' aria-expanded='false')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+  section.section
+    #app-container.container
+      #page-header
+        h1.title New Student
+      form(method='POST' action='/submit')
+        .field
+          label.label Student Name
+          .control
+            input.input(type='text' name='name' placeholder='Text input' required='')
+        .field
+          label.label Phone Number
+          .control
+            input.input(type='tel' name='phone' placeholder='Your phone number' required='')
+        .field
+          label.label Additional Phone Number
+          .control
+            input.input(type='tel' name='phone2' placeholder='Your phone number')
+        .field
+          p.control
+            label Add a profile picture:
+            br
+            input(type='file' name='profile-picture')
+            br
+        .field
+          p.control
+            button.button.is-success.is-fullwidth
+              | Submit
