@@ -121,32 +121,14 @@ block content
               th Phone 1:
               th Phone 2:
           tbody
-            tr
-              td 1
-              td Jane Mshamba
-              td 071111111
-              td 071111112
-            tr
-              td 2
-              td Jane Mshamba
-              td 071111111
-              td 071111112
-            tr
-              td 3
-              td Jane Mshamba
-              td 071111111
-              td 071111112
-            tr
-              td 4
-              td Jane Mshamba
-              td 071111111
-              td 071111112
-            tr
-              td 5
-              td Jane Mshamba
-              td 071111111
-              td 071111112
+            each val in arrays
+              tr
+                td= val.id
+                td= val.name
         
         ul
-          each val in [1, 2, 3, 4, 5]
-            li= val
+          each val in arrays
+            li= val.id
+        ul
+          each val in arrays
+            li= val.name
