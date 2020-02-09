@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var addStudentRouter = require('./routes/addstudent');
-
+var classViewRouter = require('./routes/classview');
 var app = express();
 
 // view engine setup
@@ -25,6 +25,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/addstudent', addStudentRouter);
+app.use('/classview', classViewRouter);
 
 
 // catch 404 and forward to error handler

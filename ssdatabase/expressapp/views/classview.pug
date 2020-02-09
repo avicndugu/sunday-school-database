@@ -1,0 +1,152 @@
+extends layout
+
+block content
+  nav.navbar(role='navigation' aria-label='main navigation')
+    .container
+      .navbar-brand
+        a.navbar-item(href='#')
+          h1#logo.title Sunday School Database
+        a.navbar-burger(role='button' aria-label='menu' aria-expanded='false')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+      .navbar-menu
+        .navbar-start
+          // navbar items
+        .navbar-end
+          // navbar items
+          a.navbar-item
+            | View classes
+          a.navbar-item
+            | New Student
+          a.navbar-item
+            | admin
+          a.navbar-item
+            | Logout
+  main
+    section.section
+      .container
+        h2.title Class: PP1 and PP2
+        // Tab to switch between card view and list view
+        .tabs.is-centered.is-medium
+          ul
+            li.is-active
+              a List View
+            li
+              a Card View
+        // End of Tab to switch between card view and list view
+        // card view
+        .tile.is-ancestor
+          .tile.is-parent
+            .card
+              img(src='user.png')
+              .card-text
+                h4
+                  b Jane Mshamba
+                p
+                  | Line 1: 0700123456
+                p
+                  | Line 2: 0799123456
+          .tile.is-parent
+            .card
+              img(src='user.png')
+              .card-text
+                h4
+                  b Jane Mshamba
+                p
+                  | Line 1: 0700123456
+                  | Line 2: 0799123456
+          .tile.is-parent
+            .card
+              img(src='user.png')
+              .card-text
+                h4
+                  b Jane Mshamba
+                p
+                  | Line 1: 0700123456
+                  | Line 2: 0799123456
+          .tile.is-parent
+            .card
+              img(src='user.png')
+              .card-text
+                h4
+                  b Jane Mshamba
+                p
+                  | Line 1: 0700123456
+                  | Line 2: 0799123456
+        // Seond level
+        .tile.is-ancestor
+          .tile
+            .tile.is-parent
+              article.tile.is-child.notification.is-primary
+                p.title Vertical...
+                p.subtitle Top tile
+          .tile.is-parent
+            article.tile.is-child.notification.is-danger
+              p.title Wide tile
+              p.subtitle Aligned with the right tile
+              .content
+                // Content
+          .tile.is-parent
+            article.tile.is-child.notification.is-success
+              .content
+                p.title Tall tile
+                p.subtitle With even more content
+                .content
+                  // Content
+          .tile.is-parent
+            article.tile.is-child.notification.is-success
+              .content
+                p.title Tall tile
+                p.subtitle With even more content
+                .content
+                  // Content
+        // End of Seond level
+        // End of card view
+        // List view
+        table.table.is-fullwidth.is-striped.is-bordered
+          thead
+            tr
+              th
+                abbr(title='Position') Pos
+              th Name
+              th Phone 1:
+              th Phone 2:
+          tfoot
+            tr
+              | &lt;
+              th
+                abbr(title='Position') Pos
+              th Name
+              th Phone 1:
+              th Phone 2:
+          tbody
+            tr
+              td 1
+              td Jane Mshamba
+              td 071111111
+              td 071111112
+            tr
+              td 2
+              td Jane Mshamba
+              td 071111111
+              td 071111112
+            tr
+              td 3
+              td Jane Mshamba
+              td 071111111
+              td 071111112
+            tr
+              td 4
+              td Jane Mshamba
+              td 071111111
+              td 071111112
+            tr
+              td 5
+              td Jane Mshamba
+              td 071111111
+              td 071111112
+        
+        ul
+          each val in [1, 2, 3, 4, 5]
+            li= val
