@@ -4,4 +4,13 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bulma.min.css')
   body
+    nav.navbar(role='navigation' aria-label='main navigation')
+    .container
+      .navbar-brand
+        a.navbar-item(href='#')
+          h1#logo.title Sunday School Database
+        a.navbar-burger(role='button' aria-label='menu' aria-expanded='false')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
+          span(aria-hidden='true')
     block content
