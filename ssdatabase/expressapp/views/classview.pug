@@ -37,25 +37,26 @@ block content
         // End of Tab to switch between card view and list view
         // card view
         .tile.is-ancestor
+          .tile.is-parent 
+            each val in arrays
+              .card
+                if val.id%2==0
+                  p=arrays.length
+                  p= val.id
+                  h4
+                    b= val.name
+          
           .tile.is-parent
-            .card
-              img(src='user.png')
-              .card-text
-                h4
-                  b Jane Mshamba
-                p
-                  | Line 1: 0700123456
-                p
-                  | Line 2: 0799123456
-          .tile.is-parent
-            .card
-              img(src='user.png')
-              .card-text
-                h4
-                  b Jane Mshamba
-                p
-                  | Line 1: 0700123456
-                  | Line 2: 0799123456
+            each val in arrays
+              .card
+                if val.id%3==0
+                  img(src='user.png')
+                  .card-text
+                    h4
+                      b Jane Mshamba
+                    p
+                      | Line 1: 0700123456
+                      | Line 2: 0799123456
           .tile.is-parent
             .card
               img(src='user.png')
@@ -75,31 +76,45 @@ block content
                   | Line 1: 0700123456
                   | Line 2: 0799123456
         // Seond level
+        each val in [1,2,3,4,5,6]
+          .tile.is-ancestor
+            if val%2==0
+              .tile.is-parent
+                article.tile.is-child.box
+                  p.title One
+                  p.subtitle Subtitle
+              .tile.is-parent
+                article.tile.is-child.box
+                  p.title Two
+                  p.subtitle Subtitle
+          
+
+
         .tile.is-ancestor
-          .tile
-            .tile.is-parent
+          each val in arrays
+            .tile.is-parent.is-8
               article.tile.is-child.notification.is-primary
                 p.title Vertical...
                 p.subtitle Top tile
-          .tile.is-parent
-            article.tile.is-child.notification.is-danger
-              p.title Wide tile
-              p.subtitle Aligned with the right tile
-              .content
-                // Content
-          .tile.is-parent
-            article.tile.is-child.notification.is-success
-              .content
-                p.title Tall tile
-                p.subtitle With even more content
+            .tile.is-parent
+              article.tile.is-child.notification.is-danger
+                p.title Wide tile
+                p.subtitle Aligned with the right tile
                 .content
                   // Content
-          .tile.is-parent
-            article.tile.is-child.notification.is-success
-              .content
-                p.title Tall tile
-                p.subtitle With even more content
+            .tile.is-parent
+              article.tile.is-child.notification.is-success
                 .content
+                  p.title Tall tile
+                  p.subtitle With even more content
+                  .content
+                    // Content
+            .tile.is-parent
+              article.tile.is-child.notification.is-success
+                .content
+                  p.title Tall tile
+                  p.subtitle With even more content
+                  .content
                   // Content
         // End of Seond level
         // End of card view
