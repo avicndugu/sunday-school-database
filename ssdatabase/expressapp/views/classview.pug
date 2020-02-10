@@ -37,19 +37,10 @@ block content
         // End of Tab to switch between card view and list view
         // card view
         .tile.is-ancestor
-          .tile.is-parent 
-            each val in arrays
-              .card
-                if val.id%2==0
-                  p=arrays.length
-                  p= val.id
-                  h4
-                    b= val.name
-          
           .tile.is-parent
             each val in arrays
               .card
-                if val.id%3==0
+                if val.id%10==0
                   img(src='user.png')
                   .card-text
                     h4
@@ -66,22 +57,6 @@ block content
                 p
                   | Line 1: 0700123456
                   | Line 2: 0799123456
-          .tile.is-parent
-            .card
-              img(src='user.png')
-              .card-text
-                h4
-                  b Jane Mshamba
-                p
-                  | Line 1: 0700123456
-                  | Line 2: 0799123456
-        // Seond level
-        .tile.is-ancestor
-          each val in arrays
-            .tile.is-parent
-              article.tile.is-child.box.is-6
-                p.title= val.id
-                p.subtitle 1
       
 
         .columns.is-multiline.is-mobile
@@ -89,48 +64,9 @@ block content
             .column.is-one-quarter
               article.tile.is-child.box.is-12
                 p=val.id
-
-      each val in arrays
-        .columns.is-multiline.is-mobile
-          .column.is-one-quarter
-            p.title= val.id
-            p.subtitle 1
-          .column.is-one-quarter
-            code is-one-quarter
-          .column.is-one-quarter
-            code is-one-quarter
-          .column.is-one-quarter
-            code is-one-quarter  
+                p=val.name
 
 
-        .tile.is-ancestor
-          each val in arrays
-            .tile.is-parent.is-8
-              article.tile.is-child.notification.is-primary
-                p.title Vertical...
-                p.subtitle Top tile
-            .tile.is-parent
-              article.tile.is-child.notification.is-danger
-                p.title Wide tile
-                p.subtitle Aligned with the right tile
-                .content
-                  // Content
-            .tile.is-parent
-              article.tile.is-child.notification.is-success
-                .content
-                  p.title Tall tile
-                  p.subtitle With even more content
-                  .content
-                    // Content
-            .tile.is-parent
-              article.tile.is-child.notification.is-success
-                .content
-                  p.title Tall tile
-                  p.subtitle With even more content
-                  .content
-                  // Content
-        // End of Seond level
-        // End of card view
         // List view
         table.table.is-fullwidth.is-striped.is-bordered
           thead
