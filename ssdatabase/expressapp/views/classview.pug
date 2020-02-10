@@ -76,18 +76,31 @@ block content
                   | Line 1: 0700123456
                   | Line 2: 0799123456
         // Seond level
-        each val in [1,2,3,4,5,6]
-          .tile.is-ancestor
-            if val%2==0
-              .tile.is-parent
-                article.tile.is-child.box
-                  p.title One
-                  p.subtitle Subtitle
-              .tile.is-parent
-                article.tile.is-child.box
-                  p.title Two
-                  p.subtitle Subtitle
-          
+        .tile.is-ancestor
+          each val in arrays
+            .tile.is-parent
+              article.tile.is-child.box.is-6
+                p.title= val.id
+                p.subtitle 1
+      
+
+        .columns.is-multiline.is-mobile
+          each val in arrays
+            .column.is-one-quarter
+              article.tile.is-child.box.is-12
+                p=val.id
+
+      each val in arrays
+        .columns.is-multiline.is-mobile
+          .column.is-one-quarter
+            p.title= val.id
+            p.subtitle 1
+          .column.is-one-quarter
+            code is-one-quarter
+          .column.is-one-quarter
+            code is-one-quarter
+          .column.is-one-quarter
+            code is-one-quarter  
 
 
         .tile.is-ancestor
